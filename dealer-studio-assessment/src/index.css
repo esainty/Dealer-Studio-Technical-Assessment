@@ -1,1 +1,11 @@
+/* @import '@fontsource/nokora'; */
+
 @layer reset, base, tokens, recipes, utilities;
+
+body {
+    /* font-family: var(--font-family) */
+}
+
+:root {
+    /* --font-nokora: 'Nokora', sans-serif; */
+}

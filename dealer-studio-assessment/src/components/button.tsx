@@ -5,16 +5,17 @@ export default function Button(props: { text: string, onClick?: () => void }) {
         slots: ["button", "text"],
         base: {
             button: {
-                padding: "8px 16px",
-                borderRadius: "4px",
-                backgroundColor: "blue.500",
+                padding: "6px 16px",
+                minWidth: "160px",
+                borderRadius: "999px",
+                backgroundColor: "sky.600",
                 color: "white",
                 "&:hover": {
-                    backgroundColor: "blue.600",
+                    backgroundColor: "sky.700",
                 },
             },
             text: {
-                fontSize: "16px",
+                fontSize: "14px",
                 fontWeight: "bold",
             },
         },
