@@ -3,7 +3,7 @@ import Card from "./Card"
 import fetchCardData, { type CardData } from "../utils/data_fetch_util"
 import { useEffect, useState } from "react"
 
-export default async function CardMenu() {
+export default function CardMenu() {
     const styles = sva({
         slots: ["container"],
         base: {
@@ -22,6 +22,7 @@ export default async function CardMenu() {
     const [cardData, setCardData] = useState<CardData[]>([])
 
     useEffect(() => {
+        // Perform check of array length to ensure effectful fetch only runs once
         if (cardData.length === 0) {
             const fetchData = async () => {
                 try {
@@ -32,15 +33,19 @@ export default async function CardMenu() {
                 }
 
             }
+            // Actually fetch the data
             fetchData();
         }
     })
 
     return (
         <div className={styles().container}>
-            {cardData.map((card, index) => (
-                <Card key={index} title={card.title} description={card.content} />
-            ))}
+            {cardData.length > 0
+                ? cardData.map((card, index) => (
+                    <Card key={index} title={card.title} description={card.content} />
+                ))
+                : <Card title={"Loading..."} description={""} /> // Placeholder card while data is loading
+            }
         </div>
     )
 }
