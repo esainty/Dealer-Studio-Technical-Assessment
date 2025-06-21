@@ -1,0 +1,22 @@
+{
+    "card 1": {
+        "heading": "Heading 1",
+        "content": "Content 1",
+        "action": "Button 1"
+    },
+    "card 2": {
+        "heading": "Heading 2",
+        "content": "Content 2",
+        "action": "Button 2"
+    },
+    "card 3": {
+        "heading": "Heading 3",
+        "content": "Content 3",
+        "action": "Button 3"
+    },
+    "card 4": {
+        "heading": "Heading 4",
+        "content": "Content 4",
+        "action": "Button 4"
+    }
+}
