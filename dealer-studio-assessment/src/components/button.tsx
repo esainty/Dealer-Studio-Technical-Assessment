@@ -1,18 +1,16 @@
-import { sva } from "@styled-system/css";
+import { sva } from '../../styled-system/css'
 
-export function Button(props: { text: string, onClick?: () => void }) {
+export default function Button(props: { text: string, onClick?: () => void }) {
     const styles = sva({
         slots: ["button", "text"],
         base: {
             button: {
                 padding: "8px 16px",
                 borderRadius: "4px",
-                primary: {
-                    backgroundColor: "blue.500",
-                    color: "white",
-                    "&:hover": {
-                        backgroundColor: "blue.600",
-                    },
+                backgroundColor: "blue.500",
+                color: "white",
+                "&:hover": {
+                    backgroundColor: "blue.600",
                 },
             },
             text: {
@@ -23,8 +21,8 @@ export function Button(props: { text: string, onClick?: () => void }) {
     });
 
     return (
-        <button className={styles} onClick={props.onClick}>
-            <label className={styles.text}>{props.text}</label>
+        <button className={styles().button} onClick={props.onClick}>
+            <label className={styles().text}>{props.text}</label>
         </button>
     );
 }

@@ -11,14 +11,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pandacss/types": "^0.54.0",
     "@styled-system/css": "^5.1.5",
     "@tanstack/react-router": "^1.121.27",
+    "@tanstack/react-router-devtools": "^1.121.27",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
     "@pandacss/dev": "^0.54.0",
+    "@tanstack/router-plugin": "^1.121.29",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.2",
