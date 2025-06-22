@@ -10,7 +10,7 @@ export default function Header() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: ["32px", "32px"],
+                padding: "32px 20vw",
                 overflow: "auto",
                 backgroundImage: "url('./src/assets/images/truck.jpg')",
                 backgroundSize: "cover",
