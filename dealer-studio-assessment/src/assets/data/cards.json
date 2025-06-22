@@ -12,7 +12,7 @@
         "startWithBorder": true
     },{
         "title": "Heading 3",
-        "content": "Proin elementum risus non ante consequat viverra. Duis commodo neque vel fringilla lacinia. \nDonec elementum, quam ac laoreet mattis, sem sem bibendum diam, in tempor risus sapien ut quam. Suspendisse potenti.",
+        "content": "Proin elementum risus non ante consequat viverra. Duis commodo neque vel fringilla lacinia. \n\nDonec elementum, quam ac laoreet mattis, sem sem bibendum diam, in tempor risus sapien ut quam. Suspendisse potenti.",
         "action": "Button 3",
         "startWithBorder": false
     }]

@@ -9,12 +9,14 @@ export default function CardMenu() {
         base: {
             container: {
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                alignItems: "top",
                 justifyContent: "center",
                 padding: ["16px", "8px"],
                 margin: "16px",
                 overflow: "auto",
+                gap: "32px",
             },
         },
     })

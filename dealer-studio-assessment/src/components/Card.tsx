@@ -4,47 +4,62 @@ import Button from "./Button"
 
 export default function Card(props: { title: string, description: string, actionString: string, startWithBorder?: boolean }) {
     const styles = sva({
-        slots: ["container", "image", "title", "description", "button"],
+        slots: ["container", "image", "content", "title", "description", "button"],
         base: {
             container: {
                 display: "flex",
                 flexDirection: "column",
-                margin: "16px",
+                // margin: "16px",
                 borderRadius: "10px",
                 shadow: "lg",
                 backgroundColor: "white",
+                maxWidth: "400px",
+                gap: "16px",
+                overflow: "hidden",
+                height: "min-content"
             },
             image: {
                 width: "100%",
                 height: "auto",
-                borderRadius: "8px",
+            },
+            content: {
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                padding: "32px",
+                justifyContent: "space-evenly",
             },
             title: {
                 fontSize: "20px",
                 fontWeight: "bold",
-                marginTop: "8px",
+                marginBottom: "16px",
             },
             description: {
                 fontSize: "14px",
                 color: "gray.700",
                 textAlign: "center",
+                flexGrow: 1,
+                whiteSpace: "pre-wrap"
             },
             button: {
-                margin: "16px 32px"
+                margin: "32px"
             }
         },
         variants: {
             border: {
                 true: {
                     container: {
-                        border: "2px solid",
-                        borderColor: "sky.600",
+                        outline: "4px solid",
+                        outlineColor: "sky.600",
+                        transition: "outline 0.5s ease-out",
                     }
 
                 },
                 false: {
                     container: {
-                        border: "false"
+                        outline: "4px solid transparent",
+                        transition: "outline 0.5s ease-out",
                     }
                 }
             }
@@ -57,11 +72,13 @@ export default function Card(props: { title: string, description: string, action
     return (
         <div className={styles({ border: shouldDisplayBorder }).container}>
             <img className={styles().image} src="./src/assets/images/skyline.jpg" />
-            <h2 className={styles().title}>{props.title}</h2>
-            <label className={styles().description}>
-                {props.description}
-            </label>
-            <Button text={props.actionString} buttonClassName={styles().button} onClick={() => setShouldDisplayBorder(!shouldDisplayBorder)} />
+            <div className={styles().content}>
+                <h2 className={styles().title}>{props.title}</h2>
+                <p className={styles().description}>
+                    {props.description}
+                </p>
+                <Button text={props.actionString} buttonClassName={styles().button} onClick={() => setShouldDisplayBorder(!shouldDisplayBorder)} />
+            </div>
         </div>
     )
 }
