@@ -1,6 +1,6 @@
-import { sva } from '../../styled-system/css'
+import { sva, cx } from '../../styled-system/css'
 
-export default function Button(props: { text: string, onClick?: () => void }) {
+export default function Button(props: { text: string, buttonClassName?: string, textClassName?: string, onClick?: () => void }) {
     const styles = sva({
         slots: ["button", "text"],
         base: {
@@ -22,8 +22,8 @@ export default function Button(props: { text: string, onClick?: () => void }) {
     });
 
     return (
-        <button className={styles().button} onClick={props.onClick}>
-            <label className={styles().text}>{props.text}</label>
+        <button className={cx(styles().button, props.buttonClassName)} onClick={props.onClick}>
+            <label className={cx(styles().text, props.textClassName)}>{props.text}</label>
         </button>
     );
 }
