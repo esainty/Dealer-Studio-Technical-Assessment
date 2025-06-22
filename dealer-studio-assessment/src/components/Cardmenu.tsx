@@ -10,14 +10,16 @@ export default function CardMenu() {
         base: {
             container: {
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { base: "column", lg: "row" },
                 flexWrap: "wrap",
-                alignItems: "top",
-                justifyContent: "center",
+                alignItems: { base: "center", lg: "start" },
+                justifyContent: { base: "start", lg: "center" },
                 padding: ["16px", "8px"],
                 margin: "16px",
                 overflow: "auto",
                 gap: "32px",
+                maxWidth: { base: "100%", md: "70vw" },
+                justifySelf: "center",
             },
         },
     })

@@ -13,8 +13,8 @@ export default function Card(props: { title: string, description: string, action
                 borderRadius: "10px",
                 shadow: "lg",
                 backgroundColor: "white",
-                maxWidth: "400px",
-                gap: "16px",
+                maxWidth: "300px",
+                gap: "8px",
                 overflow: "hidden",
                 height: "min-content"
             },
@@ -26,24 +26,28 @@ export default function Card(props: { title: string, description: string, action
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
-                padding: "32px",
+                padding: "8px 16px",
                 justifyContent: "space-evenly",
+                alignItems: 'start',
+                flexGrow: 1,
+                minHeight: "200px",
+                overflow: "scroll",
             },
             title: {
                 fontSize: "20px",
                 fontWeight: "bold",
-                marginBottom: "16px",
+                marginBottom: "8px",
             },
             description: {
                 fontSize: "14px",
                 color: "gray.700",
-                textAlign: "center",
                 flexGrow: 1,
-                whiteSpace: "pre-wrap"
+                whiteSpace: "pre-wrap",
+                lineHeight: "1.1",
             },
             button: {
-                margin: "32px"
+                marginBottom: "16px",
+                alignSelf: "center",
             }
         },
         variants: {
@@ -80,8 +84,8 @@ export default function Card(props: { title: string, description: string, action
                 <p className={styles().description}>
                     {props.description}
                 </p>
-                <Button text={props.actionString} buttonClassName={styles().button} onClick={() => setShouldDisplayBorder(!shouldDisplayBorder)} />
             </div>
+            <Button text={props.actionString} buttonClassName={styles().button} onClick={() => setShouldDisplayBorder(!shouldDisplayBorder)} />
         </div>
     )
 }
