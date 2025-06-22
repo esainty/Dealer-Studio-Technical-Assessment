@@ -50,7 +50,8 @@ export default function Card(props: { title: string, description: string, action
             border: {
                 true: {
                     container: {
-                        outline: "4px solid",
+                        outlineWidth: "4px",
+                        outlineStyle: "solid",
                         outlineColor: "sky.600",
                         transition: "outline 0.5s ease-out",
                     }
@@ -58,7 +59,9 @@ export default function Card(props: { title: string, description: string, action
                 },
                 false: {
                     container: {
-                        outline: "4px solid transparent",
+                        outlineWidth: "4px",
+                        outlineColor: "transparent",
+                        outlineStyle: "solid",
                         transition: "outline 0.5s ease-out",
                     }
                 }
