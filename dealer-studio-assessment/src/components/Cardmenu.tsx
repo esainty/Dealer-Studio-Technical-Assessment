@@ -42,7 +42,7 @@ export default function CardMenu() {
         <div className={styles().container}>
             {cardData.length > 0
                 ? cardData.map((card, index) => (
-                    <Card key={index} title={card.title} description={card.content} actionString={card.action} />
+                    <Card key={index} title={card.title} description={card.content} actionString={card.action} startWithBorder={card.startWithBorder} />
                 ))
                 : <Card title={"Loading..."} description={""} actionString={"..."} /> // Placeholder card while data is loading
             }

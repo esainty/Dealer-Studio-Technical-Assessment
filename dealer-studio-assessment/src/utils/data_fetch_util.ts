@@ -4,6 +4,7 @@ export type CardData = {
     title: string;
     content: string;
     action: string;
+    startWithBorder?: boolean;
 }
 
 const data: CardData[] = cardData.cards

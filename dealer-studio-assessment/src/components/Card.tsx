@@ -2,7 +2,7 @@ import { useState } from "react";
 import { sva } from "../../styled-system/css"
 import Button from "./Button"
 
-export default function Card(props: { title: string, description: string, actionString: string }) {
+export default function Card(props: { title: string, description: string, actionString: string, startWithBorder?: boolean }) {
     const styles = sva({
         slots: ["container", "image", "title", "description", "button"],
         base: {
@@ -33,12 +33,29 @@ export default function Card(props: { title: string, description: string, action
                 margin: "16px 32px"
             }
         },
+        variants: {
+            border: {
+                true: {
+                    container: {
+                        border: "2px solid",
+                        borderColor: "sky.600",
+                    }
+
+                },
+                false: {
+                    container: {
+                        border: "false"
+                    }
+                }
+            }
+
+        }
     })
 
-    const [shouldDisplayBorder, setShouldDisplayBorder] = useState<boolean>(false);
+    const [shouldDisplayBorder, setShouldDisplayBorder] = useState<boolean>(props.startWithBorder ?? false);
 
     return (
-        <div className={styles().container}>
+        <div className={styles({ border: shouldDisplayBorder }).container}>
             <img className={styles().image} src="./src/assets/images/skyline.jpg" />
             <h2 className={styles().title}>{props.title}</h2>
             <label className={styles().description}>

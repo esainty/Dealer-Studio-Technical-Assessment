@@ -3,14 +3,17 @@
     [{
         "title": "Heading 1",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec nunc et dui scelerisque tristique. Nunc condimentum nisi at dolor sagittis tincidunt.",
-        "action": "Button 1"
+        "action": "Button 1",
+        "startWithBorder": false
     }, {
         "title": "Heading 2",
         "content": "Praesent viverra orci quam, at porttitor massa vestibulum vitae. Aenean posuere viverra finibus. Vestibulum vel scelerisque nunc.",
-        "action": "Button 2"
+        "action": "Button 2",
+        "startWithBorder": true
     },{
         "title": "Heading 3",
         "content": "Proin elementum risus non ante consequat viverra. Duis commodo neque vel fringilla lacinia. \nDonec elementum, quam ac laoreet mattis, sem sem bibendum diam, in tempor risus sapien ut quam. Suspendisse potenti.",
-        "action": "Button 3"
+        "action": "Button 3",
+        "startWithBorder": false
     }]
 }
